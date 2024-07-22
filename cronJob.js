@@ -13,8 +13,8 @@ const logFilePath = path.join(__dirname, "cron.log");
 cron.schedule("*/1 * * * *", () => {
   // Process text files and CSV files in parallel
   Promise.all([
-    processTextFiles("D:\\Dev\\Node Shedule\\BankDetails", "txt"),
-    processCSVFiles("D:\\Dev\\Node Shedule\\BankExcel", "csv"),
+    processTextFiles("File Path", "txt"),
+    processCSVFiles("File Path", "csv"),
   ])
     .then(() => {
       const logMessage = `Successful\n`;
